@@ -18,7 +18,7 @@ export class ConnectService {
       // If randomNo greater then 5 then It will return error
       // Otherwise it will return user details
       const randomNo = Math.floor(Math.random() * 10);
-      if(false){
+      if(randomNo > 5){
         return throwError("Error From ThrowError observable")
       } else{
         return of(user);
