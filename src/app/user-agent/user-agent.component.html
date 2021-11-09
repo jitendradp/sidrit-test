@@ -1,6 +1,21 @@
-<div class="container">
-    <label><b>First Name:</b></label> {{ user.firstName }} 
-    <br>
-    <label><b>Last Name:</b></label>  {{ user.lastName }}
-</div>
+<ng-container *ngIf="!user">
+    <table id="user">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td> {{ user.firstName }} </td>
+                <td> {{ user.lastName }} </td>
+                <td><button class="btn-primary" (click)="viewDetails(user)"> View</button> </td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
+<app-user-details *ngIf="user" [user]="user" (dispayUserList)="dispayUserList()"></app-user-details>
+
 

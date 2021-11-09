@@ -4,7 +4,7 @@
     </div>
 
     <app-connecting *ngSwitchCase="CallStatus.Connecting"></app-connecting>
-    <app-user-agent *ngSwitchCase="CallStatus.Connected" [user]="user"></app-user-agent>
+    <app-user-agent *ngSwitchCase="CallStatus.Connected" [users]="users"></app-user-agent>
     <app-no-available-agent *ngSwitchCase="CallStatus.Failed" ></app-no-available-agent>
     
  </container-element>

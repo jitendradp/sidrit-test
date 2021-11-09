@@ -1,4 +1,18 @@
-{
-    "firstName":"Jitendra",
-    "lastName":"prajapati"
-}
+[
+    {
+        "id":1,
+        "firstName":"Jitendra",
+        "lastName":"prajapati"
+    },
+    {
+        "id":2,
+        "firstName":"Jake",
+        "lastName":"prajapati"
+    },
+    {
+        "id":3,
+        "firstName":"John",
+        "lastName":"prajapati"
+    }
+
+]

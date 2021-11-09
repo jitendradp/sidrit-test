@@ -7,10 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UserAgentComponent implements OnInit {
 
-  @Input() user: any;
+  @Input() users: any;
+  user:any;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  viewDetails(user:any){
+    this.user=user;
+  }
+
+  dispayUserList(){
+    this.user = undefined;
   }
 
 }

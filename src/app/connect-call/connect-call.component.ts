@@ -11,7 +11,7 @@ export class ConnectCallComponent implements OnInit {
 
   currentcallStatus = CallStatus.Initial;
   CallStatus = CallStatus;
-  user:any;
+  users:any;
   constructor(private connectService: ConnectService) { }
 
   ngOnInit(): void {
@@ -21,8 +21,8 @@ export class ConnectCallComponent implements OnInit {
     this.currentcallStatus = CallStatus.Connecting;
     this.connectService.connectUser().pipe(tap(()=>{
       this.currentcallStatus = CallStatus.Connected;
-    })).subscribe((user)=>{
-      this.user = user;
+    })).subscribe((users)=>{
+      this.users = users;
     }, error =>{
       this.currentcallStatus = CallStatus.Failed;
     });
