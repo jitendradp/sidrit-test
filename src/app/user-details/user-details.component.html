@@ -1,8 +1,10 @@
 <div class="container">
-    
-    <label><b>First Name:</b></label> {{ user.firstName }} 
-    <br>
-    <label><b>Last Name:</b></label>  {{ user.lastName }}
-    <br>
-    <button class="btn-primary"  (click)="dispayUserList.emit()"> Display List</button>
+    <ng-container *ngIf="!userAgent">
+        <label><b>First Name:</b></label> {{ user.firstName }} 
+        <br>
+        <label><b>Last Name:</b></label>  {{ user.lastName }}
+        <br>
+        <button class="btn-primary"  (click)="userAgent=user;"> Connect to this agent</button>
+    </ng-container>
+    <app-user-agent-details  *ngIf="userAgent" [userAgent]="userAgent"></app-user-agent-details>
 </div>

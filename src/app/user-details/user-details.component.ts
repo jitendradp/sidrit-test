@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class UserDetailsComponent implements OnInit {
 
   @Input() user:any;
-  @Output() dispayUserList = new EventEmitter();
+  userAgent:any;
   constructor() { }
 
   ngOnInit(): void {

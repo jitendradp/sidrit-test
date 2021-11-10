@@ -10,6 +10,7 @@ import { ConnectCallComponent } from './connect-call/connect-call.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserAgentComponent } from './user-agent/user-agent.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserAgentDetailsComponent } from './user-agent-details/user-agent-details.component';
 
 const routes: Routes = [
   {path: '' , redirectTo:'connect-call', pathMatch: 'full'},
@@ -29,7 +30,8 @@ const routes: Routes = [
     VideoChatComponent,
     ConnectCallComponent,
     UserAgentComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    UserAgentDetailsComponent
   ],
   imports: [
     BrowserModule,
